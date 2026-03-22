@@ -1,0 +1,10 @@
+console.log("42:",typeof 42); // "number"
+console.log("Alice:", typeof "Alice"); // "string"
+console.log("true:", typeof true); // "boolean"
+console.log("undefined:", typeof undefined); // "undefined"
+console.log("null:", typeof null); // "object" (Note: this is a known JavaScript quirk)
+console.log("Symbol:", typeof Symbol("sym")); // "symbol"
+console.log("BigInt:", typeof BigInt(10)); // "bigint"
+console.log("Object:", typeof {}); // "object"
+console.log("Array:", typeof []); // "object"
+console.log("Function:", typeof function () {}); // "function"
