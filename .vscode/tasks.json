@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "test",
+			"path": "lab1/js-exercises",
+			"group": "test",
+			"problemMatcher": [],
+			"label": "npm: test - lab1/js-exercises",
+			"detail": "jest"
+		}
+	]
+}
