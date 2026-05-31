@@ -1,0 +1,34 @@
+Example File Structure
+Let's delve deeper into each part of the src/ directory with an example file structure.
+
+src/
+├── components/
+│ ├── CustomButton.js
+│ └── Card.js
+├── navigation/
+│ └── AppNavigator.js
+├── screens/
+│ ├── HomeScreen.js
+│ └── ProfileScreen.js
+├── assets/
+│ ├── images/
+│ │ └── logo.png
+│ └── fonts/
+│ └── OpenSans-Regular.ttf
+└── App.js
+
+Description:
+
+components/: CustomButton.js & Card.js: Reusable UI components used across
+multiple screens.
+
+navigation/: AppNavigator.js: Configures the app's navigation structure using
+React Navigation or a similar library.
+
+screens/: HomeScreen.js & ProfileScreen.js: Define the UI and logic for specific
+screens or pages within the app.
+
+assets/: images/: Stores image files like logos, icons, and illustrations.
+fonts/: Contains custom font files used in the app.
+
+App.js: Imports and sets up the main navigation and renders the initial screen.

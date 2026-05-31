@@ -1,14 +1,18 @@
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "npm",
-			"script": "test",
-			"path": "lab1/js-exercises",
-			"group": "test",
-			"problemMatcher": [],
-			"label": "npm: test - lab1/js-exercises",
-			"detail": "jest"
-		}
-	]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "expo: start (active file folder)",
+      "type": "shell",
+      "command": "npx expo start",
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
 }

@@ -1,0 +1,44 @@
+Typical File Structure of a Simple React Native Project
+
+Understanding the file structure of a React Native project is crucial for
+maintaining organized and scalable codebases. A well-structured project enhances
+readability, ease of navigation, and collaboration among developers.
+
+Overview of Project Structure A typical React Native project follows a
+structured hierarchy with designated folders for components, assets, navigation,
+screens, and more. Here's an overview of the common directories and files:
+
+MyReactNativeApp/
+├── android/
+├── ios/
+├── src/
+│ ├── components/
+│ │ ├── CustomButton.js
+│ │ └── Card.js
+│ ├── navigation/
+│ │ └── AppNavigator.js
+│ ├── screens/
+│ │ ├── HomeScreen.js
+│ │ └── ProfileScreen.js
+│ ├── assets/
+│ │ ├── images/
+│ │ │ └── logo.png
+│ │ └── fonts/
+│ └── App.js
+├── package.json
+├── App.js
+└── README.md
+
+Common Folders and Files �. android/ and ios/: Contain platform-specific code
+and configuration for Android and iOS respectively. Typically not modified
+frequently unless adding native modules or changing native configurations. �.
+src/: Houses the main application code. components/: Contains reusable UI
+components. navigation/: Manages navigation configurations using libraries like
+React Navigation. screens/: Contains screen components representing different
+views or pages in the app. assets/: Stores static assets like images, fonts, and
+icons. App.js: The root component of the application. �. package.json: Lists
+project dependencies, scripts, and metadata. Manages the project's dependencies
+and configurations. �. App.js: The entry point of the React Native application.
+Renders the root component and sets up providers or navigators. �. README.md:
+Provides documentation and information about the project. Useful for onboarding
+new developers or documenting project details.

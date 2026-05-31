@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YourBillSaver</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: #f5fdf7;
+      }
+
+      /* Top bar */
+      .topbar {
+        height: 72px;
+        background: #2e8b57;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 25px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); */
+      }
+
+      /* Left side: logo + name */
+      .brand {
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        justify-content: center;
+        padding: 6px 10px;
+        border-radius: 12px;
+        transition:
+          box-shadow 0.2s ease,
+          transform 0.15s ease;
+      }
+
+      .brand img {
+        height: 64px;
+      }
+
+      /* Menu */
+      .menu a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .menu a:hover {
+        text-decoration: underline;
+      }
+
+      /* Profile */
+      .profile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+
+      /* Content area */
+      .content {
+        margin-top: 72px;
+        /* same height as topbar */
+        height: calc(100vh - 72px);
+        background: white;
+        overflow: hidden;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Profile link */
+      .avatar-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        text-decoration: none;
+        line-height: 0;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .profile-img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #fff;
+        transition:
+          filter 0.2s ease,
+          transform 0.08s ease,
+          box-shadow 0.2s ease;
+      }
+
+      /* Hover */
+      .avatar-link:hover .profile-img {
+        filter: brightness(1.08) saturate(1.2);
+        box-shadow: 0 0 0 3px #a8e063;
+      }
+
+      /* Active (mouse down / click press) */
+      .avatar-link:active .profile-img {
+        filter: brightness(0.88) saturate(1.3);
+        transform: scale(0.96);
+        box-shadow: 0 0 0 3px #7ccf47;
+      }
+
+      /* Keyboard focus (useful to confirm click/focus state) */
+      .avatar-link:focus-visible .profile-img {
+        box-shadow: 0 0 0 4px #d6f5a3;
+      }
+
+      .logo-img {
+        object-fit: cover;
+        transition:
+          filter 0.2s ease,
+          transform 0.08s ease,
+          box-shadow 0.2s ease;
+      }
+
+      /* Hover */
+      .brand:hover,
+      .brand:focus-within {
+        background-color: rgba(255, 255, 255, 0.14);
+        box-shadow: 0 0 0 3px #a8e063;
+        transform: translateY(-1px);
+      }
+
+      /* Active (mouse down / click press) */
+      .brand:active {
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 0 3px #7ccf47;
+        transform: scale(0.97);
+      }
+
+      /* Keyboard focus (useful to confirm click/focus state) */
+      .brand:focus-visible .brand {
+        box-shadow: 0 0 0 4px #d6f5a3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="brand">
+        <a
+          href="#"
+          onclick="
+            loadPage('./yourbillsaver/splash.html');
+            return false;
+          "
+          class="logo-link"
+        >
+          <img
+            src="./yourbillsaver/images/Your_Bill_Saver_Logo_small.png"
+            alt="Logo"
+          />
+        </a>
+      </div>
+
+      <nav class="menu">
+        <a
+          href="#"
+          onclick="
+            loadPage('./yourbillsaver/advice_tips/adviceTips.html');
+            return false;
+          "
+          >Tips</a
+        >
+        <a
+          href="#"
+          onclick="
+            loadPage('./yourbillsaver/charts/charts.html');
+            return false;
+          "
+          >Charts</a
+        >
+        <a
+          href="#"
+          onclick="
+            loadPage('./yourbillsaver/help/help.html');
+            return false;
+          "
+          >Help</a
+        >
+      </nav>
+
+      <div class="profile">
+        <span>Hermanto</span>
+        <a
+          href="#"
+          onclick="
+            loadPage('./yourbillsaver/user_profile/userProfile.html');
+            return false;
+          "
+          class="avatar-link"
+        >
+          <img
+            src="./yourbillsaver/images/Profile_Icon_Small.png"
+            class="profile-img"
+            alt="Profile"
+          />
+        </a>
+      </div>
+    </header>
+
+    <!-- LOWER CONTENT AREA -->
+    <main class="content">
+      <iframe id="contentFrame" src="./yourbillsaver/splash.html"></iframe>
+    </main>
+
+    <script>
+      function loadPage(page) {
+        document.getElementById("contentFrame").src = page;
+      }
+    </script>
+  </body>
+</html>

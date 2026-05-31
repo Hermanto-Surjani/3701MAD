@@ -1,0 +1,60 @@
+Exercises
+
+Exercise 1: Implementing a Toggle Button
+
+Objective:
+Create a button that toggles the visibility of a text message when pressed.
+Requirements:
+    Use the Button component to create the toggle button.
+    Manage the visibility state using useState.
+    Implement conditional rendering to show or hide the text based on the state.
+
+Steps:
+�. Initialize a state variable to track visibility.
+�. Create a button that toggles this state.
+�. Conditionally render a text message based on the state.
+
+Exercise 2: Creating a Searchable List
+Objective:
+Build a searchable list of items using FlatList and TextInput.
+Requirements:
+Display a list of at least 10 items using FlatList.
+Include a TextInput at the top for searching.
+Filter the list based on the search query in real-time.
+Steps:
+�. Initialize state variables for the search query and filtered data.
+�. Implement a function to handle search input and update the filtered data.
+�. Render the FlatList with the filtered data.
+
+Exercise 3: Building a Login Form
+
+Objective:
+    Create a simple login form with TextInput fields and a Button.
+Requirements:
+    Include TextInput fields for username and password.
+    Use useState to manage the input values.
+    Add a Button to submit the form.
+    Implement conditional rendering to display a success message upon submission.
+Steps:
+    �. Initialize state variables for username, password, and login status.
+    �. Create TextInput components for user inputs.
+    �. Add a Button to handle form submission.
+    �. Conditionally render a success message based on login status.
+
+Exercise 4: Conditional Rendering Based on Input
+
+Objective:
+    Display different messages based on the user's input length in a TextInput.
+
+Requirements:
+    Create a TextInput for user input.
+    Use useState to track the input value.
+    Conditionally render a message:
+        If input length < 5: "Input is too short."
+        If input length between 5 and 10: "Good job!"
+        If input length > 10: "Input is too long."
+
+Steps:
+    �. Initialize a state variable for the input.
+    �. Create a TextInput to capture user input.
+    �. Implement conditional rendering based on the input length.

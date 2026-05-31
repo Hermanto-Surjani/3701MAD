@@ -1,0 +1,22 @@
+Summary
+
+Creating and organizing custom components is a fundamental skill in React Native development. It
+promotes code reusability, maintainability, and scalability, making your application easier to manage as it
+grows. Understanding the typical file structure of a React Native project further enhances your ability to
+navigate and maintain the codebase efficiently.
+
+Custom Components:
+    Encapsulate specific functionality or UI elements.
+    Can be functional or class-based, with functional components being preferred due to React
+    Hooks.
+    Utilize props to pass data and event handlers, enabling dynamic and reusable components.
+    Can be composed together to build complex UIs from simpler building blocks.
+
+Project File Structure:
+    Organized directories (components, screens, navigation, assets) facilitate easy
+    navigation and management.
+    Separating concerns ensures that each part of the application has a clear responsibility.
+    Enhances collaboration by providing a predictable and standardized project layout.
+    
+Mastering the creation and organization of custom components, along with understanding the project
+structure, sets a solid foundation for building robust and efficient React Native applications.
